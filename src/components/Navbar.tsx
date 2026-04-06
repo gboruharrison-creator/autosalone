@@ -65,6 +65,7 @@ export default function Navbar() {
               { label: 'Usate', to: '/auto?condizione=used' },
               { label: 'Tutti i Veicoli', to: '/auto' },
               { label: 'Contatti', to: '/contatti' },
+              { label: 'Area Dealer', to: '/per-dealer' },
             ].map(link => (
               <Link key={link.to} to={link.to} style={{
                 color: solid ? 'var(--text)' : 'rgba(255,255,255,0.85)',
@@ -152,6 +153,7 @@ export default function Navbar() {
             { label: 'Auto Usate', to: '/auto?condizione=used' },
             { label: 'Tutti i Veicoli', to: '/auto' },
             { label: 'Contatti', to: '/contatti' },
+            { label: 'Area Dealer', to: '/per-dealer' },
           ].map((link, i) => (
             <Link key={link.to} to={link.to} style={{
               color: 'white', textDecoration: 'none',

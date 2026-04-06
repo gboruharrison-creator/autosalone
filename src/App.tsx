@@ -14,6 +14,7 @@ import Privacy from './pages/Privacy';
 import Garanzia from './pages/Garanzia';
 import PerDealer from './pages/PerDealer';
 import Login from './pages/Auth/Login';
+import ForgotPassword from './pages/Auth/ForgotPassword';
 import Register from './pages/Auth/Register';
 import Admin from './pages/Admin/index';
 
@@ -53,6 +54,7 @@ export default function App() {
         {/* Auth routes — no navbar */}
         <Route path="/admin/login" element={<Login />} />
         <Route path="/admin/registrati" element={<Register />} />
+        <Route path="/admin/password-dimenticata" element={<ForgotPassword />} />
 
         {/* Admin routes — own layout */}
         <Route path="/admin/*" element={<Admin />} />

@@ -81,6 +81,9 @@ export default function Login() {
           }}>
             {loading ? 'Accesso...' : 'Accedi'}
           </button>
+          <Link to="/admin/password-dimenticata" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', textDecoration: 'none', marginTop: '8px', display: 'block', textAlign: 'right' }}>
+            Password dimenticata?
+          </Link>
         </form>
 
         <p style={{ textAlign: 'center', marginTop: '24px', color: 'rgba(255,255,255,0.3)', fontSize: '0.82rem' }}>

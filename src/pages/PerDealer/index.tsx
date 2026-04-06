@@ -92,6 +92,26 @@ export default function PerDealer() {
                   Vedi i prezzi
                 </a>
               </div>
+              <div style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.7rem', letterSpacing: '0.08em', marginBottom: '12px' }}>
+                  Sei già registrato?
+                </p>
+                <Link to="/admin/login" style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  color: 'rgba(255,255,255,0.5)', textDecoration: 'none',
+                  fontSize: '0.82rem', fontWeight: 400,
+                  borderBottom: '1px solid rgba(255,255,255,0.15)',
+                  paddingBottom: '2px', transition: 'all 0.2s',
+                }}
+                  onMouseEnter={e => { e.currentTarget.style.color = 'white'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}
+                >
+                  Accedi all'Area Riservata
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
