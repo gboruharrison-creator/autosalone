@@ -45,6 +45,8 @@ export default function Footer() {
                 { label: 'Finanziamento', to: '/' },
                 { label: 'Garanzia', to: '/' },
                 { label: 'Contatti', to: '/contatti' },
+                { label: 'Area Dealer', to: '/admin/login' },
+                { label: 'Registra la tua Concessionaria', to: '/per-dealer' },
               ]
             },
             {

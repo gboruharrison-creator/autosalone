@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate, Routes, Route } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
 import AdminDashboard from './Dashboard';
@@ -8,7 +8,6 @@ import AdminLeads from './Leads';
 import AdminSettings from './Settings';
 import toast from 'react-hot-toast';
 
-const NAVY = 'var(--black)';
 const RED = 'var(--red)';
 
 const navItems = [
@@ -21,8 +20,6 @@ const navItems = [
 export default function Admin() {
   const { user, dealer, loading, logout } = useAuthStore();
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   useEffect(() => {
     if (!loading && !user) navigate('/admin/login');
   }, [user, loading]);

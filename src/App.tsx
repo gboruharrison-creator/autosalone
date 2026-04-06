@@ -12,6 +12,7 @@ import CarDetail from './pages/CarDetail';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Garanzia from './pages/Garanzia';
+import PerDealer from './pages/PerDealer';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 import Admin from './pages/Admin/index';
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/contatti" element={<PublicLayout><Contact /></PublicLayout>} />
         <Route path="/privacy" element={<PublicLayout><Privacy /></PublicLayout>} />
         <Route path="/garanzia" element={<PublicLayout><Garanzia /></PublicLayout>} />
+        <Route path="/per-dealer" element={<PublicLayout><PerDealer /></PublicLayout>} />
 
         {/* Auth routes — no navbar */}
         <Route path="/admin/login" element={<Login />} />

@@ -12,7 +12,7 @@ export default function Register() {
     name: '', city: '', province: '', address: '',
     phone: '', whatsapp: '', email: '',
   });
-  const { signup, setDealer, refreshDealer } = useAuthStore();
+  const { signup, refreshDealer } = useAuthStore();
   const navigate = useNavigate();
 
   const handleAccount = (e: React.FormEvent) => {
