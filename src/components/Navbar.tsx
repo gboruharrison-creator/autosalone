@@ -59,7 +59,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+          <nav className="nav-desktop" style={{ display: 'none', alignItems: 'center', gap: '2px' }}>
             {[
               { label: 'Nuove', to: '/auto?condizione=new' },
               { label: 'Usate', to: '/auto?condizione=used' },
@@ -183,6 +183,7 @@ export default function Navbar() {
 
       <style>{`
         @media(max-width: 768px) { .desktop-only { display: none !important; } }
+        @media (min-width: 768px) { .nav-desktop { display: flex !important; } }
       `}</style>
     </>
   );

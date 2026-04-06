@@ -34,3 +34,134 @@ html, body, #root {
 
 /* Smooth image loading */
 img { display: block; }
+
+/* ── MOBILE RESPONSIVE ── */
+
+/* Navbar */
+@media (max-width: 767px) {
+  .desktop-only { display: none !important; }
+}
+
+/* Hero — stack on mobile */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-photo {
+    display: none !important;
+  }
+  .hero-text {
+    padding: 120px 1.5rem 60px !important;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    position: relative !important;
+    bottom: auto !important;
+  }
+}
+
+/* Condition selector */
+@media (max-width: 640px) {
+  .condition-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Why us */
+@media (max-width: 900px) {
+  .whyus-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .whyus-sticky {
+    position: relative !important;
+    top: auto !important;
+  }
+  .whyus-features {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* New vs Used */
+@media (max-width: 768px) {
+  .split-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .split-item {
+    min-height: 320px !important;
+  }
+}
+
+/* Cars listing filters */
+@media (max-width: 768px) {
+  .filter-bar {
+    gap: 6px !important;
+  }
+  .filter-bar select {
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+}
+
+/* Car detail */
+@media (max-width: 1024px) {
+  .detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .detail-sticky {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+/* Specs grid */
+@media (max-width: 640px) {
+  .specs-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* Contact */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Footer */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Car grid */
+@media (max-width: 480px) {
+  .car-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Featured cars gap on mobile */
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* Section padding */
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 60px 1.5rem !important;
+  }
+  .section-pad-sm {
+    padding: 40px 1.5rem !important;
+  }
+}

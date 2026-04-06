@@ -64,7 +64,7 @@ export default function Contact() {
         </div>
 
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '60px 2rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '2px', alignItems: 'start' }}>
+          <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '2px', alignItems: 'start' }}>
 
             {/* Left — info */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>

@@ -27,7 +27,7 @@ export default function Home() {
       </Helmet>
 
       {/* ── HERO ── */}
-      <section style={{
+      <section className="hero-grid" style={{
         minHeight: '100vh',
         backgroundColor: 'var(--black)',
         display: 'grid',
@@ -36,7 +36,7 @@ export default function Home() {
         overflow: 'hidden',
       }}>
         {/* Left — Text */}
-        <div style={{
+        <div className="hero-text" style={{
           display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
           padding: '140px 3rem 80px',
           position: 'relative', zIndex: 2,
@@ -100,7 +100,7 @@ export default function Home() {
             </form>
 
             {/* CTA links */}
-            <div style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
               <Link to="/auto?condizione=new" style={{
                 color: 'white', textDecoration: 'none', fontSize: '0.82rem',
                 fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase',
@@ -132,6 +132,7 @@ export default function Home() {
 
         {/* Right — Photo */}
         <motion.div
+          className="hero-photo"
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}
           style={{ position: 'relative', overflow: 'hidden' }}
         >
@@ -149,6 +150,7 @@ export default function Home() {
 
         {/* Stats bar */}
         <motion.div
+          className="hero-stats"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }}
           style={{
             position: 'absolute', bottom: 0, left: 0, right: 0,
@@ -183,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* ── FEATURED CARS ── */}
-      <section style={{ backgroundColor: 'var(--cream)', padding: '100px 2rem' }}>
+      <section className="section-pad" style={{ backgroundColor: 'var(--cream)', padding: '100px 2rem' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '48px' }}>
             <div>
@@ -208,7 +210,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2px' }}>
+          <div className="featured-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2px' }}>
             {featured.map((car, i) => (
               <motion.div key={car.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -224,7 +226,7 @@ export default function Home() {
 
       {/* ── NEW vs USED ── */}
       <section style={{ backgroundColor: 'var(--black)', padding: '0' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        <div className="split-grid" style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
           {[
             {
               to: '/auto?condizione=new',
@@ -241,7 +243,7 @@ export default function Home() {
               img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop',
             },
           ].map(item => (
-            <Link key={item.to} to={item.to} style={{
+            <Link key={item.to} to={item.to} className="split-item" style={{
               textDecoration: 'none', position: 'relative',
               overflow: 'hidden', display: 'block', minHeight: '460px',
             }}>
@@ -273,10 +275,10 @@ export default function Home() {
       </section>
 
       {/* ── WHY US ── */}
-      <section style={{ backgroundColor: 'white', padding: '100px 2rem' }}>
+      <section className="section-pad" style={{ backgroundColor: 'white', padding: '100px 2rem' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '80px', alignItems: 'start' }}>
-            <div style={{ position: 'sticky', top: '100px' }}>
+          <div className="whyus-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '80px', alignItems: 'start' }}>
+            <div className="whyus-sticky" style={{ position: 'sticky', top: '100px' }}>
               <p style={{ color: 'var(--mid-gray)', fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '12px' }}>Perché noi</p>
               <h2 className="serif" style={{ color: 'var(--black)', fontSize: 'clamp(1.8rem, 2.8vw, 2.6rem)', fontWeight: 400, lineHeight: 1.15, marginBottom: '20px' }}>
                 La differenza di un acquisto consapevole
@@ -285,7 +287,7 @@ export default function Home() {
                 Dal {dealer.founded} aiutiamo le famiglie di {dealer.city} a trovare l'auto giusta. Senza pressioni, senza sorprese.
               </p>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px', backgroundColor: 'var(--warm-gray)' }}>
+            <div className="whyus-features" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px', backgroundColor: 'var(--warm-gray)' }}>
               {[
                 { num: '01', title: 'Garanzia Legale', desc: 'Ogni veicolo usato è coperto da garanzia legale di conformità per 12 mesi. Nessuna clausola nascosta.' },
                 { num: '02', title: 'Finanziamento Trasparente', desc: 'Simulazione rata personalizzata in 5 minuti. TAN e TAEG chiari. Nessuna commissione nascosta.' },

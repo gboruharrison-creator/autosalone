@@ -83,7 +83,7 @@ export default function CarDetail() {
         </div>
 
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '40px 2rem 80px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.5fr) 400px', gap: '40px', alignItems: 'start' }}>
+          <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.5fr) 400px', gap: '40px', alignItems: 'start' }}>
 
             {/* Left */}
             <div>
@@ -164,7 +164,7 @@ export default function CarDetail() {
                 <p style={{ color: 'var(--mid-gray)', fontSize: '0.65rem', fontWeight: 500, letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px' }}>
                   Caratteristiche
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', backgroundColor: 'var(--warm-gray)' }}>
+                <div className="specs-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', backgroundColor: 'var(--warm-gray)' }}>
                   {[
                     { label: 'Anno', value: car.year },
                     { label: 'Chilometri', value: car.condition === 'new' ? '0 km' : `${car.mileage.toLocaleString('it')} km` },
@@ -208,7 +208,7 @@ export default function CarDetail() {
             </div>
 
             {/* Right — sticky panel */}
-            <div style={{ position: 'sticky', top: '90px', display: 'flex', flexDirection: 'column', gap: '2px' }}>
+            <div className="detail-sticky" style={{ position: 'sticky', top: '90px', display: 'flex', flexDirection: 'column', gap: '2px' }}>
 
               {/* Title + price */}
               <div style={{ backgroundColor: 'white', padding: '28px', border: '1px solid var(--warm-gray)' }}>

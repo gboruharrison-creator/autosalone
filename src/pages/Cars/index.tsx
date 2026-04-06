@@ -138,7 +138,7 @@ export default function Cars() {
         padding: '14px 2rem',
         position: 'sticky', top: '68px', zIndex: 40,
       }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className="filter-bar" style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
 
           {/* Search */}
           <div style={{ position: 'relative', flex: '1', minWidth: '180px' }}>
@@ -225,7 +225,7 @@ export default function Cars() {
                 </button>
               </motion.div>
             ) : (
-              <motion.div key="grid" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+              <motion.div key="grid" className="car-grid" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
